@@ -13,12 +13,13 @@
 ## Cloudflare Pages पर deploy करें
 
 1. [dash.cloudflare.com](https://dash.cloudflare.com) → **Workers & Pages** → **Create** → **Pages** → **Connect to Git**
-2. यह repository (`vidhik-saathi`) चुनें
-3. Build settings में कुछ मत भरें:
+2. यह repository (`vidhiksaathi`) चुनें
+3. Project name: **vidhiksaathi** (ताकि URL बने `vidhiksaathi.pages.dev`)
+4. Build settings में कुछ मत भरें:
    - Framework preset: **None**
    - Build command: *(खाली छोड़ें)*
    - Build output directory: `/` (या खाली)
-4. **Save and Deploy** — website live हो जाएगी: `https://vidhik-saathi.<apka-subdomain>.pages.dev`
+5. **Save and Deploy** — website live हो जाएगी: `https://vidhiksaathi.<apka-subdomain>.pages.dev`
 
 इसके बाद जब भी इस repo में `index.html` में बदलाव push करेंगे, website automatically update हो जाएगी।
 
