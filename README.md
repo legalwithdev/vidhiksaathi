@@ -1,39 +1,41 @@
-# विधिक साथी — Vidhik Saathi
+# Vidhiksaathi
 
-विधिक साथी की आधिकारिक वेबसाइट। यह एक single-page static site है — कोई build step नहीं, कोई dependency नहीं। सिर्फ़ `index.html`।
+Vidhiksaathi's official website — a static site with **no build step, no dependencies**. Just open `index.html`.
 
 ## Features
 
-- पूरी तरह self-contained single file (`index.html`)
-- हिंदी content — Mukta + Tiro Devanagari Hindi fonts
-- Light और Dark mode (OS setting के हिसाब से automatic)
-- Mobile responsive
-- FAQ (expandable `<details>`), services grid, process steps, CTA, footer + legal disclaimer
+- **Brand:** dark navy blue & white
+- **Default language:** English
+- **13 languages:** English, हिन्दी, বাংলা, मराठी, ગુજરાતી, ਪੰਜਾਬੀ, ଓଡ଼ିଆ, தமிழ், తెలుగు, ಕನ್ನಡ, മലയാളം, اردو, অসমীয়া — via the globe button (🌐 Language) in the navbar. Choice is saved in the browser (localStorage). Urdu renders right-to-left automatically.
+- Mobile responsive, FAQ accordion, services grid, process steps, CTA, footer + legal disclaimer
+- Graceful degradation: with JavaScript off, the site shows in English
 
-## Cloudflare Pages पर deploy करें
+## Files
+
+- `index.html` — page structure + styles + language switcher logic
+- `lang1.js` — translations: en, hi, bn, mr, gu, pa
+- `lang2.js` — translations: or, ta, te, kn, ml, ur, as
+
+## Deploy on Cloudflare Pages
 
 1. [dash.cloudflare.com](https://dash.cloudflare.com) → **Workers & Pages** → **Create** → **Pages** → **Connect to Git**
-2. यह repository (`vidhiksaathi`) चुनें
-3. Project name: **vidhiksaathi** (ताकि URL बने `vidhiksaathi.pages.dev`)
-4. Build settings में कुछ मत भरें:
-   - Framework preset: **None**
-   - Build command: *(खाली छोड़ें)*
-   - Build output directory: `/` (या खाली)
-5. **Save and Deploy** — website live हो जाएगी: `https://vidhiksaathi.<apka-subdomain>.pages.dev`
+2. Select this repository (`vidhiksaathi`)
+3. Project name: **vidhiksaathi** (so the URL becomes `vidhiksaathi.pages.dev`)
+4. Build settings — leave empty: Framework preset **None**, no build command, output directory `/`
+5. **Save and Deploy** — live at `https://vidhiksaathi.<your-subdomain>.pages.dev`
 
-इसके बाद जब भी इस repo में `index.html` में बदलाव push करेंगे, website automatically update हो जाएगी।
+Every push to this repo now auto-updates the site.
 
 ## Custom domain
 
-Cloudflare Pages project → **Custom domains** → **Set up a custom domain** (जैसे `vidhiksaathi.in`)। SSL free और automatic है।
+Cloudflare Pages project → **Custom domains** → add e.g. `vidhiksaathi.in`. Free automatic SSL.
 
-## Deploy करने से पहले बदलें
+## Before going live, replace
 
-- Phone number: `tel:+911234567890` (3 जगह)
-- Email: `help@vidhiksaathi.in` (2 जगह)
-- Stats (10,000+ / 50+ / 4.8/5) — अपने असली आँकड़ों से
-- Address / about section — अपनी organisation की जानकारी से
+- Phone: `tel:+911234567890` (2 places)
+- Email: `help@vidhiksaathi.in` (2 places)
+- Stats (10,000+ / 50+ / 4.8/5) with real figures
 
 ## License
 
-© 2026 विधिक साथी — सर्वाधिकार सुरक्षित
+© 2026 Vidhiksaathi — All rights reserved
